@@ -19,7 +19,7 @@ cv2.polylines(img, [pts], True, (0,0,0), 3)
 
 # Text
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(img, 'OpenCV rocks!', (550,130), font, 1.1, (255,0,255), 6, cv2.LINE_AA)
+cv2.putText(img, 'OpenCV rocks!', (550,130), font, 1.9, (255,0,255), 6, cv2.LINE_AA)
 
 cv2.imshow('Edited', img)
 cv2.waitKey(0)
