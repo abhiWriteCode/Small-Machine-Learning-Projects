@@ -21,7 +21,7 @@ while True:
 		eyes = eye_cascade.detectMultiScale(eye_gray_face_roi)
 		for (ex,ey,ew,eh) in eyes:
 			cv2.rectangle(eye_color_face_roi, (ex,ey), (ex+ew,ey+eh), (0,255,0), 2)
-			cv2.putText(frame, 'Eye', (x+ex,y+ey), font, 0.7, (255,255,255), 1, cv2.LINE_AA)
+			cv2.putText(frame, 'Eye', (x+ex,y+h//3+ey), font, 0.7, (255,255,255), 1, cv2.LINE_AA)
 
 		smile_color_face_roi = frame[y+2*h//3:y+h, x:x+w]
 		smile_gray_face_roi = gray[y+2*h//3:y+h, x:x+w]

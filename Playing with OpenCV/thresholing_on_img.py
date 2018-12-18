@@ -4,11 +4,11 @@ import cv2
 
 g_img = cv2.imread('images/dirty_img.PNG', cv2.IMREAD_GRAYSCALE)
 rtrn, t_img = cv2.threshold(g_img, 10, 255, cv2.THRESH_BINARY)
-amt_img = cv2.adaptiveThreshold(g_img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
-agt_img = cv2.adaptiveThreshold(g_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 115, 5)
+amt_img = cv2.adaptiveThreshold(g_img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 21, 2)
+agt_img = cv2.adaptiveThreshold(g_img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 81, 5)
 
-cv2.imshow('g_img', g_img)
-cv2.imshow('t_img', t_img)
+# cv2.imshow('g_img', g_img)
+# cv2.imshow('t_img', t_img)
 # cv2.imshow('t_img inv', cv2.bitwise_not(t_img))
 cv2.imshow('amt_img', amt_img)
 cv2.imshow('agt_img', agt_img)
@@ -30,4 +30,4 @@ cv2.destroyAllWindows()
 # adaptiveMethod – Adaptive thresholding algorithm to use, ADAPTIVE_THRESH_MEAN_C or ADAPTIVE_THRESH_GAUSSIAN_C . See the details below.
 # thresholdType – Thresholding type that must be either THRESH_BINARY or THRESH_BINARY_INV .
 # blockSize – Size of a pixel neighborhood that is used to calculate a threshold value for the pixel: 3, 5, 7, and so on.
-# C – Constant subtracted from the mean or weighted mean (see the details below). Normally, it is positive but may be zero or negative as well.
+# C – Constant subtracted from the mean or weighted mean. Normally, it is positive but may be zero or negative as well.
